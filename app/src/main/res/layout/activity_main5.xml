@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.Main5Activity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+        <!--定义第1个TableLayout，有两行
+           第1列所有单元格的宽度可以被收缩，以保证该表格能适应父容器的宽度
+           第2列所有单元格的宽度可以拉伸，以保证能完全填满表格空余空间-->
+        <TableLayout
+            android:id="@+id/TableLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="1"
+            android:stretchColumns="2">
+
+            <!--这是此TableLayout的第1行，没有使用TableRow，直接添加一个Button，那么次Button自己占用整行 -->
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="独自一行的按钮1"/>
+
+            <!-- 这是第2行，先添加一个TableRow，并为TableRow添加三个Button，也就是此行包含三列 -->
+            <TableRow>
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="普通按钮1"/>
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="被收缩的按钮1"/>
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="被拉伸的按钮1"/>
+            </TableRow>
+
+
+
+        </TableLayout>
+        <!--定义第2个TableLayout，有两行
+           第1列所有单元格的宽度可以被收缩，以保证该表格能适应父容器的宽度
+           第2列所有单元格的宽度可以拉伸，以保证能完全填满表格空余空间-->
+        <TableLayout
+            android:id="@+id/TableLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:collapseColumns="0"
+            android:shrinkColumns="1"
+            android:stretchColumns="2">
+
+            <!--这是此TableLayout的第3行，没有使用TableRow，直接添加一个Button，那么次Button自己占用整行 -->
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="独自一行的按钮2"/>
+
+            <!-- 这是第4行，先添加一个TableRow，并为TableRow添加三个Button，也就是此行包含三列 -->
+            <TableRow>
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="普通按钮2"/>
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="被收缩的按钮2"/>
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="被拉伸的按钮2"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/UC4_button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
